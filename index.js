@@ -10,14 +10,14 @@ const app = express();
 const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
 const supabaseUrl = 'https://jurpzuxdjdfhhltdbwid.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1cnB6dXhkamRmaGhsdGRid2lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU0ODc2OTEsImV4cCI6MjAzMTA2MzY5MX0.zniJyAUzeXhjdNyZwZFTXGZdZSnqTdIX6eeAL1GDsLU';
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
-    res.sendFile('/HomePage.html', { root: __dirname });
+    res.sendFile('public/HomePage.html', { root: __dirname });
 })
 
 app.get('/supabase_data', async (req, res) => {
