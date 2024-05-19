@@ -1,0 +1,78 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 60px; /* Ensure space for the footer */
+}
+
+/* Page Specific Styles */
+h2 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+h3 a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Content Section Styles */
+.container > div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container > div > h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;  /* Reduced padding */
+    font-size: 0.8em;  /* Reduced font size */
+    text-align: center;
+}

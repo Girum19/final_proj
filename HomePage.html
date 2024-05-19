@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST 377 FINAL PROJECT - HOME PAGE</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="HomePage.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1>INST 377 Team 33 Weather App</h1>
+        <nav id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="HomePage.html">Main Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="AboutPage.html">About Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="functionality.html">Functionality Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="HelpPage.html">Help Page</a> <!-- Fixed class name -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6" id="current-location">
+                <h2>WELCOME, YOUR CURRENT LOCATION IS:</h2>
+                <h2 id="current-city"></h2>
+            </div>
+
+            <div class="col-md-6" id="new-location">
+                <h2>Change your location:</h2>
+                <form name="form" id="location-form" onsubmit="newLocation(event)">
+                    <label for="location">NEW LOCATION:</label>
+                    <input type="text" class="form-control" id="location-input">
+                    <input type="submit" class="btn btn-primary mt-2" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="weather-info" class="mt-4">
+            <h2 id="hourly-forecast-heading"></h2>
+            <div id="hourly-forecast-list" class="d-flex">
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+            </div>
+
+            <h2>Daily Forecast</h2>
+            <div id="daily-forecast-list" class="mt-3">
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2024 Weather Forecast. All rights reserved.</p>
+    </footer>
+</body>
+</html>

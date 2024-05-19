@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST 377 FINAL PROJECT - HOME PAGE</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@1.30.0/dist/umd/supabase.min.js" defer></script>
+    <script src="statesData.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1>INST 377 Team 33 Weather App</h1>
+        <nav id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="HomePage.html">Main Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="AboutPage.html">About Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="functionality.html">Functionality Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="HelpPage.html">Help Page</a> <!-- Fixed class name -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <div class="form">
+        <label for="zip">Zip:</label>
+        <input type="text" id="zip">
+        <br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" maxlength="2">
+
+        <button id="submit" onclick="createChart()">Search
+    </div>
+    <script>
+        document.getElementById("submit").addEventListener("onclick", function () {
+            createChart();
+        })
+    </script>
+
+
+    <div class="container">
+        <div id="chart-container">
+            <canvas id="weatherChart"></canvas>
+        </div>
+        <div id="messageBox" class="message-box">
+            Welcome! Please search for a location using a valid zip code/postal code and country to view up-to-date weather information, warnings and more.
+            <br>
+            We hope that all your requests are met :D
+        </div>
+    </div>
+    <div id="map-container">
+        <h1>Current average state temperatures!</h1>
+        <div id="map"></div>
+    </div>
+
+    <div id="cutoff"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="front.js"></script>
+</body>
+
+</html>
